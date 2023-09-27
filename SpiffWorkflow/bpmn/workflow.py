@@ -51,7 +51,7 @@ class BpmnTaskFilter(TaskFilter):
 
 class BpmnTaskIterator(TaskIterator):
 
-    def __init__(self, task, end_at_spec=None, max_depth=1000, depth_first=True, task_filter=None, **kwargs):
+    def __init__(self, task, end_at_spec=None, max_depth=10000, depth_first=True, task_filter=None, **kwargs):
 
         task_filter = task_filter or BpmnTaskFilter(**kwargs)
         super().__init__(task, end_at_spec, max_depth, depth_first, task_filter)
